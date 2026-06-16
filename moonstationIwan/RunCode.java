@@ -9,12 +9,13 @@ public class RunCode {
 	public static void main(String[] args) {
 		creator();
 		welcome();
+		//Scanner wird nicht geschlossen
 	}
 	
 //	###################################################################################
 //	CREATOR
 //	###################################################################################
-	public static void creator() {
+	public static void creator() { //irreführender Name daher ein creator ein Nomen ist, statt irgendwas beschreibt. Besser wär createObjects()
 		s = new SpaceStation("IWANs beste Mondbasis");
 		
 		Engineer e1 = new Engineer("Herbert", "Mechatronik", 12);
@@ -65,7 +66,7 @@ public class RunCode {
 			try {
 				action = scan.nextInt();
 				
-				illagalIndexException(action);
+				illagalIndexException(action); //Rechtschreibfehler Illagal, es ist illegal
 				
 				break;
 			} catch (IllegalArgumentException e) {
@@ -83,7 +84,7 @@ public class RunCode {
 //	AKTIONEN
 //	###################################################################################
 	
-	public static void actions(int action) {
+	public static void actions(int action) { //Switch case wäre einfacher und besser geeignet
 		if (action == 1) {
 			s.printAllEquipment();
 			welcome();
@@ -108,12 +109,12 @@ public class RunCode {
 		} else if (action == 7) {
 			reworkEngineer();
 		} else if (action == 8) {
-			System.out.println("Geben Sie den Namen für des Disposable Device ein: ");
+			System.out.println("Geben Sie den Namen für des Disposable Device ein: "); //verschieben in eigene Methode
 			String name = scan.next();
 			s.repairDisposableDevice(name);
 			welcome();
 		} else if (action == 9) {
-			System.out.println("Geben Sie den Namen für des Disposable Device ein: ");
+			System.out.println("Geben Sie den Namen für des Disposable Device ein: "); //verschieben in eigene Methode
 			String name = scan.next();
 			s.useDisposableDevice(name);
 			welcome();
@@ -143,7 +144,7 @@ public class RunCode {
 	public static void cleanDevice() {
 		int key = checkKey();
 		if (key == 0 || !(s.getMap().get(key) instanceof ResearchDevice)) {
-			System.out.println("Den schlüssel gibt es nicht oder Das Objekt gehärt nicht der klasse an");
+			System.out.println("Den schlüssel gibt es nicht oder Das Objekt gehärt nicht der klasse an"); // "... Obejekt GEHÖRT nicht ..." immer mehr rechtschreib fehler, tsk tsk tsk
 		} else {
 			ResearchDevice researchDevice = (ResearchDevice) s.getMap().get(key);
 			researchDevice.cleanDevice();
@@ -158,7 +159,7 @@ public class RunCode {
 		System.out.println("Geben Sie den Schlüssel ein: ");
 		int key = checkKey();
 		if (key == 0 || !(s.getMap().get(key) instanceof LifeSupportDevice)) {
-			System.out.println("Den schlüssel gibt es nicht oder Das Objekt gehärt nicht der klasse an");
+			System.out.println("Den schlüssel gibt es nicht oder Das Objekt gehärt nicht der klasse an"); //Schon wieder dasselber
 		} else {
 			LifeSupportDevice lifeSupportDevice = (LifeSupportDevice) s.getMap().get(key);
 			lifeSupportDevice.statusReport();
@@ -173,7 +174,7 @@ public class RunCode {
 		System.out.println("Geben Sie den Schlüssel ein: ");
 		int key = checkKey();
 		if (key == 0 || !(s.getMap().get(key) instanceof ResearchDevice)) {
-			System.out.println("Den schlüssel gibt es nicht oder Das Objekt gehärt nicht der klasse an");
+			System.out.println("Den schlüssel gibt es nicht oder Das Objekt gehärt nicht der klasse an"); // Tsk Tsk Tsk
 		} else {
 			ResearchDevice researchDevice = (ResearchDevice) s.getMap().get(key);
 			System.out.println(researchDevice.calculateTotalDataOutput());
@@ -297,7 +298,7 @@ public class RunCode {
 		}
 	}
 	
-	public static void checkNumberIsNegativ(int nr) {
+	public static void checkNumberIsNegativ(int nr) { // "Negative" nicht Negativ, in english please. he she it das s muss mit
 		if (nr < 0) {
 			throw new IllegalArgumentException("Die Zahl darf nicht negativ sein!");
 		}
