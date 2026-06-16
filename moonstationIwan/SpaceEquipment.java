@@ -57,7 +57,7 @@ public abstract class SpaceEquipment implements Comparable<SpaceEquipment>{
 		 return safetyLevel;
 	}
 	
-	public String getEngName() {
+	public String getEngName() { //alle getter gemeinsam an einem platz
 		return responsibleEngineer.getName();
 	}
 	
