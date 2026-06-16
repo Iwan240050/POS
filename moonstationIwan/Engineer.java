@@ -10,7 +10,7 @@ public class Engineer {
 		this.name = name;
 		this.spezialisation = spezialisation;
 		this.experienceYears = experienceYears;
-		title = "Lehrling";
+		title = "Lehrling"; //Nicht jeder Engineer fängt als Lehrling an.
 	}
 	
 	public String setBetterEducation(String title) {
