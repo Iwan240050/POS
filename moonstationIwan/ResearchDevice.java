@@ -46,7 +46,7 @@ public class ResearchDevice extends SpaceEquipment implements Maintainable{
 	
 	public void cleanDevice() {
 		System.out.println("Das gerät wurde Überarbeitet erneuert und geputzt: ");
-		 this.increaseSafetyLevel();
+		 this.increaseSafetyLevel(); //Logik Fehler, desto höher das safetey level desto gefährlich ist es. Heißt, wenn man es putzt, wirds gefährlicher hier, macht keinen sinn
 		 System.out.println("Das sicherheitslevel wurde erhöht\n Safety Level = " + this.getSafetyLevel());
 	}
 }
