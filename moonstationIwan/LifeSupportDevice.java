@@ -38,9 +38,9 @@ public class LifeSupportDevice extends SpaceEquipment implements Maintainable{
 	
 	public void statusReport() {
 		if (criticalSystem == true && needsMaintenance() == true) {
-			System.out.println("WARNUNG DAS SYSTEM IST INSTABIL");
+			System.out.println("WARNUNG DAS SYSTEM IST INSTABIL"); // Du hast den ! am ende vergessen.
 		} else {
-			System.out.println("System Stabil");
+			System.out.println("System Stabil"); // Du hast den . am Ende vergessen
 		}
 	}
 }
