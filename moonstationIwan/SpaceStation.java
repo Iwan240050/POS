@@ -88,7 +88,7 @@ public class SpaceStation {
 		return null;
 	}
 	
-	public void removeEquipmentBelowSafetyLevel(int minSafeLevel) {
+	public void removeEquipmentBelowSafetyLevel(int minSafeLevel) { // viel zu lang
 		Iterator<SpaceEquipment> it = equipmentList.iterator();
 		
 		while (it.hasNext()) {
